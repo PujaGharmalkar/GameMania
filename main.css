@@ -1,4 +1,10 @@
+body{
+  background-image: url(http://www.seekgif.com/download/mobile-game-background-14570);
+  background-size: cover;
+  height: 500px;
+  background-position: relative;
 
+}
 
 #guessContainer
 {
