@@ -1,9 +1,184 @@
-body {
-  background-image: url(http://www.seekgif.com/download/mobile-game-background-14570);
-  background-size: cover;
-  height: 500px;
-  position: relative;
+
+
+#guessContainer
+{
+    float:left;
+    text-align: center;
 }
-h2 {
-  background-image: url(https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjSwK7v0YXiAhWWop4KHXa5B5UQjRx6BAgBEAU&url=https%3A%2F%2Fwww.123rf.com%2Fstock-photo%2Fsnake_cartoon.html&psig=AOvVaw39m3HOmyS_SF6_QjSSqVRM&ust=1557187548081939);
+
+#hangman-img-container
+{
+    /*float:left;*/
+    height: 105px;
+    width: 200px;
+    border: 3px solid;
+    padding-left: 15px;
+    margin: 20px;
+    font-size: 30;
+    font-weight: bold;
+    text-align: center;
+}
+
+#hangman-img-container b
+{
+    display: none;
+}
+
+.guessingWordContainer label
+{
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#img
+{
+    width: 100px;
+    height: 100px;
+}
+
+
+.tryLetters
+{
+    background-color: aliceblue;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.tryLetters a
+{
+    font-size: 20px;
+    padding: 2px;
+}
+
+.tryLetters ul
+{
+    list-style-type: none;
+}
+
+.tryLetters ul li
+{
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.not-tried
+{
+    color: lightgrey;
+}
+
+.ok
+{
+    color: green;
+}
+
+.notok
+{
+    color: darkred;
+    text-decoration: line-through;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(red, orange);
+}
+
+.butter-cheese-eggs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+
+  > div {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+
+    .block {
+      cursor: pointer;
+      display: table-cell;
+      width: 100px;
+      height: 100px;
+      font: bold 50px/0 'Comic Sans MS', sans-serif;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      border-bottom: 3px solid #fff;
+    }
+
+    &:nth-child(2),
+    &:nth-child(5),
+    &:nth-child(8) {
+      border-left: 3px solid #fff;
+      border-right: 3px solid #fff;
+    }
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.win {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  transform-origin: 50% 50%;
+  transform-origin: center;
+  width: 300px;
+  height: 300px;
+  margin-top: -60px;
+  margin-left: -20px;
+  padding-top: 140px;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+
+  h2 {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 100px;
+    text-shadow: 0px 0px 50px white;
+    text-align: center;
+  }
+
+  button {
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    outline: none;
+    display: inline-block;
+    padding: 15px;
+    background-color: darkred;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    color: white;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
